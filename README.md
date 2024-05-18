@@ -87,7 +87,7 @@ To commence with GIta Summarizer:
 1. Ensure possession of a valid subscription key and service region for Microsoft Azure Speech Service.
 2. Clone the repository using
    ```bash
-   git clone https://github.com/Sgvkamalakar/Voice-Vista.git
+   git clone https://github.com/Sgvkamalakar/Gita_Summarizer.git
    ```
 3. Install the requirements
    ```bash

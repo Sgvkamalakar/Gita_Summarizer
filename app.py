@@ -130,7 +130,7 @@ def summarize(text):
                 res.append(i)
         st.markdown("#### **Summarized text**")
         for i in res:
-            st.write(i)
+            st.markdown("- "+i)
         
 if option=="Upload Audio File":
     
@@ -160,8 +160,6 @@ elif option=="Real-time Speech Input":
     # Function to capture real-time speech input and perform transcription
     def real_time_speech():
         speak=st.info("Speak into your microphone 🗣️...", icon="💡")
-        time.sleep(3)
-        speak.empty()
         # Speech configuration
         speech_config = speechsdk.SpeechConfig(subscription=subscription_key, region=service_region)
         speech_config.speech_recognition_language="en-US"
@@ -171,6 +169,7 @@ elif option=="Real-time Speech Input":
         speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config,audio_config=audio_config)
         
         with st.spinner("Listening🧏🏻..."):
+            speak.empty()
             result = speech_recognizer.recognize_once_async().get()
             if result.reason == speechsdk.ResultReason.RecognizedSpeech:
                 st.markdown("#### Transcription")
@@ -195,7 +194,7 @@ elif option=="Real-time Speech Input":
         real_time_speech()                       
                      
 else:
-    st.markdown("#### **Type in your queries about Gita..**")
+    st.markdown("#### **Enter your questions about the Gita below 👇🏻..**")
     text=st.text_input('',value='')
     text=text.strip()
     if text!='':

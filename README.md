@@ -10,7 +10,7 @@ _Condense, Comprehend and Connect with Gita..._
 
 
 ## Overview
-The "**Gita Summarizer**" is an advanced application designed to distill the profound teachings of the Bhagavad Gita into concise and comprehensible summaries. This tool leverages the capabilities of Azure Speech-to-Text and LLMWare's powerful summarization models to provide users with insightful summaries of the Gita's chapters and verses
+The "**Gita Summarizer**" is an application designed to distill the profound teachings of the Bhagavad Gita into concise and comprehensible summaries. This tool leverages the capabilities of `Azure Speech-to-Text` and `LLMWare's powerful summarization models` to provide users with insightful summaries of the Gita's chapters and verses
 
 ## Features
 1. *Real-time Speech Input:*
@@ -55,23 +55,35 @@ The "**Gita Summarizer**" is an advanced application designed to distill the pro
 ## How It Works
 
 ### 1. *Real-time Speech Input:*
-   
 
+   ![image](https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/d1756118-b60a-402c-babf-c13cb1b3df74)
 
    - Upon selecting "Real-time Speech Input," the application configures the microphone to capture user speech.
    - Captured speech is then forwarded to Azure's Speech Service for transcription.
    - The transcribed text undergoes summarization using the SLIM Summary Tool before being presented to the user.
 
 ### 2. *Upload `wav` Audio File:*
-   
-   
+
+   ![image](https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/cb15435d-fbda-4892-aad3-5792dd3c54cb)
+
    - Users opting for "Upload Audio File" can upload their audio files directly.
    - Uploaded files are sent to Azure's Speech Service via an HTTP POST request for transcription.
    - Post transcription, the text is summarized using the SLIM Summary Tool and displayed to the user.
+     
+### 3. *Text Input:*
 
+   ![image](https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/93020b0a-56b2-4583-91b8-f936dc98b529)
+
+   - Users can directly type or paste text into the app to receive an instant summary.
+   - The app processes the input text and provides a concise summary in seconds.
+   - Easily input text and get clear, summarized information with just a few clicks.
 
 
 ## Demo 📹
+
+
+https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/c54e45ed-080c-4676-92a2-ce3986a9b2ba
+
 
 
 ### Use Cases for Gita Summarizer

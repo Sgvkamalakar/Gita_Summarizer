@@ -3,7 +3,7 @@ import azure.cognitiveservices.speech as speechsdk
 import streamlit as st
 from llmware.models import ModelCatalog
 import requests
-import os, re
+import os, re, time
 from PIL import Image
 from dotenv import load_dotenv
 import base64
@@ -128,13 +128,13 @@ def summarize(text):
         for i in filtered_responses:
             if i not in res and i.lower() not in stop_sentences:
                 res.append(i)
-    
+        st.markdown("#### **Summarized text**")
         for i in res:
             st.write(i)
         
 if option=="Upload Audio File":
     
-    st.markdown("### **Upload an Audio file**")
+    st.markdown("#### **Upload an Audio file**")
     uploaded_file = st.file_uploader("", type="wav")
     
     if uploaded_file is not None:
@@ -155,12 +155,13 @@ if option=="Upload Audio File":
                 
 elif option=="Real-time Speech Input":
     
-    st.markdown("### **Real Time Audio Summarizer**")  
+    st.markdown("#### **Real Time Audio Summarizer**")  
      
     # Function to capture real-time speech input and perform transcription
     def real_time_speech():
-        st.info("Speak into your microphone 🗣️...", icon="💡")
-        
+        speak=st.info("Speak into your microphone 🗣️...", icon="💡")
+        time.sleep(3)
+        speak.empty()
         # Speech configuration
         speech_config = speechsdk.SpeechConfig(subscription=subscription_key, region=service_region)
         speech_config.speech_recognition_language="en-US"
@@ -194,11 +195,17 @@ elif option=="Real-time Speech Input":
         real_time_speech()                       
                      
 else:
-    st.markdown("### **Type in your queries about Gita..**")
+    st.markdown("#### **Type in your queries about Gita..**")
     text=st.text_input('',value='')
-    if text.strip()!='':
-        if st.button("Get summary"):
-            # st.write(summarize(text))
-            summarize(text)  
+    text=text.strip()
+    if text!='':
+        if len(text)<10:
+            err=st.error("Query should be atleast 10 chars long")
+            time.sleep(5)
+            err.empty()
+        else:
+            if st.button("Get summary"):
+                # st.write(summarize(text))
+                summarize(text)  
             
     

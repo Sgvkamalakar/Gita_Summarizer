@@ -35,8 +35,7 @@ The "**Gita Summarizer**" is an advanced application designed to distill the pro
 <p align="center">
 <img src="https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/5fe1a9f6-51f3-49a1-a730-f05304a96696" width=200px height=200px>
 <img src="https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/debb5489-2d44-40fc-88ec-23dd149e4acd" width=200px height=200px>
-<img src="https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/1f300911-c20f-420e-ba8c-0f3d06e4ee4e)
-" width=250pxheight:150px>
+<img src="https://github.com/Sgvkamalakar/Gita_Summarizer/assets/103712713/1f300911-c20f-420e-ba8c-0f3d06e4ee4e" width=250pxheight:150px>
 </p>
 
 
